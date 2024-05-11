@@ -7,7 +7,7 @@ from google.oauth2 import service_account
 
 from googleapiclient.discovery import build
 
-service_account_email = "ashirajesh.ar@gmail.com"
+service_account_email = "ramya.rnr@gmail.com"
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 credentials = service_account.Credentials.from_service_account_file('client_secret.json')
