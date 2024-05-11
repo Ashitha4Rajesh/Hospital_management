@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contact-form-main" style="height: 500px;"><br><br>
+  <div class="container mb-3" style="background-color: rgb(127, 214, 255);position: relative;height: 400px;">
+      
+                 
+                      <div class="row ">
+<div class="container emp-profile">
+    
+        
+           
+           <br><br>
+            <h2 class="register-heading mb-3" style="position: relative;left:450px">Book Apoinment For {{user}}</h2>
+<form method="post" action=''>
+
+    {% csrf_token %}
+    <br><br>
+    <div class="form-group">
+      <label style="position: relative;right:1px;font-size: 14px;color: black;"><b>Required Speciality:</b></label>
+    <input type="text" name="req" class="form-control" style="font-size: 18px;">
+    </div>
+    <div class="form-group"><label style="position: relative;right:1px;font-size: 14px;color: black;"><b>Date of Appointment:</b></label>
+    <input type="date" name='start' class="form-control"  placeholder="Date of Appointment" style="font-size: 18px;"> </div>
+    <div class="form-group">
+      <label style="position: relative;right:1px;font-size: 14px;color: black;"><b>Start Time of Appointment:</b></label>
+    <input type="time" name='time'class="form-control" style="font-size: 18px;"></div>
+    <input type="email" name='email'class="form-control" hidden value={{form.email}}></div>
+
+    <input type="submit" value="Confirm" class="btn btn" style="position: relative;left:550px;"> 
+</div></div></div>
+{%endblock%}
+
+
+</form>
+  </html>
+

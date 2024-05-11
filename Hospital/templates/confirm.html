@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contact-form-main" style="height: 420px;">
+    <div class="container" style="background-color: rgb(127, 214, 255);position: relative;top:70px;height: 350px;">
+    
+        
+           <div  style="text-align:justify;">
+            
+<h2> Doctor name       :{{form.first_name}}</h2>
+
+<h2> appointment date :{{start}}</h2>
+<h2> start time :{{time}}</h2>
+<h2> end time :{{end_time}}</h2><br><br>
+<h3 style="font-size:14;color:rgb(237, 20, 52)">Your Booking is Successful.Event will be stored in Doctor's email's google calendar</h3>
+    <form method="post" >
+        {% csrf_token %}
+    
+    <input type="text" class="form-control" value="{{req}}" name="required" hidden>
+    <input type="date" class="form-control" value="{{start}}" name="starts" hidden>
+    <input type="time" class="form-control" value="{{time}}" name="time" hidden>
+    <input type="email" name='email'class="form-control" hidden value={{email}}>
+ 
+ 
+    </form>
+</div>
+    </div>
+</div>
+{%endblock%}
